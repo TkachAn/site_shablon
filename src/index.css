@@ -1,0 +1,102 @@
+@import './vars.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inherit;
+  background-color: var(--bg-body, #f4f4f4);
+  color: var(--clr-text, #333);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Base Button Styles based on vars.css */
+.btn-primary {
+  background-color: var(--clr-btn-accent-bg);
+  color: var(--clr-btn-accent-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-btn-accent-hover-bg);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background-color: var(--clr-plt-8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Helper Classes */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-h1);
+  letter-spacing: -0.03em;
+}
+
+.hero-section {
+  padding: 0; /* Remove padding for full-width hero */
+}
+
+.hero-content {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.discount {
+  color: var(--clr-plt-14);
+  font-weight: 900;
+}

@@ -1,0 +1,427 @@
+:root {
+  /* =========================================
+     CORE PALETTE (Универсальная гамма для структуры и контента)
+     ========================================= */
+  --clr-plt-1: #acacac;
+  /* Body Background */
+  --clr-plt-2: #5b818c;
+  /* Grid/Wrapper Background */
+  --clr-plt-3: #8ab5bf;
+  /* Header Background */
+  --clr-plt-4: #b9c4c9;
+  /* Main Background */
+  --clr-plt-5: #efece7;
+  /* Section Background */
+  --clr-plt-6: #f9f9f9;
+  /* Article Background */
+  --clr-plt-7: #446773;
+  /* Footer Background */
+  --clr-plt-8: #0070f3;
+  /* Accent / Links */
+  --clr-plt-9: #333333;
+  /* Main Text (Dark) */
+  --clr-plt-10: #ffffff;
+  /* White (Text on Dark/BG) */
+  --clr-plt-11: #2980b9;
+  /* Title Accent / H1 */
+  --clr-plt-12: #666666;
+  /* Secondary Text */
+  --clr-plt-13: #999999;
+  /* Muted Text / Icons */
+  --clr-plt-14: #d32f2f;
+  /* Error / Alert */
+  --clr-plt-15: #2ecc71;
+  /* Success */
+  --clr-plt-16: #72f2f2;
+  /* Secondary Accent / Highlights */
+
+  [data-theme="dark"] {
+    --clr-plt-1: #acacac;
+    --clr-plt-2: #5b818c;
+    --clr-plt-3: #8ab5bf;
+    --clr-plt-4: #b9c4c9;
+    --clr-plt-5: #efece7;
+    --clr-plt-6: #f9f9f9;
+    --clr-plt-7: #446773;
+    --clr-plt-8: #0070f3;
+    --clr-plt-9: #333333;
+    --clr-plt-10: #ffffff;
+    --clr-plt-11: #2980b9;
+    --clr-plt-12: #666666;
+    --clr-plt-13: #999999;
+    --clr-plt-14: #d32f2f;
+    --clr-plt-15: #2ecc71;
+    --clr-plt-16: #72f2f2;
+  }
+
+
+  /* Сетка и Брейкпоинты */
+  --bp-tablet: 768px;
+  --bp-mobile: 767px;
+  --header-h: 61px;
+
+  /* --- ТИПОГРАФИКА (Unified Typography) --- */
+  --clr-text: var(--clr-plt-9);
+  --clr-text-muted: var(--clr-plt-12);
+  --clr-text-light: var(--clr-plt-10);
+  /*header*/
+  --clr-nav-text: var(--clr-plt-4);
+  --clr-icon-hover: var(--clr-plt-11);
+
+  /*h1-h6*/
+  --clr-h1: var(--clr-plt-11);
+  --clr-h2: var(--clr-plt-2);
+  --clr-h3: var(--clr-plt-3);
+  --clr-h4: var(--clr-plt-4);
+  --clr-h5: var(--clr-plt-12);
+  --clr-h6: var(--clr-plt-13);
+
+  --clr-link: var(--clr-plt-3);
+  --clr-menu-page: var(--clr-plt-4);
+
+  /*aside*/
+  --clr-link-1: var(--clr-plt-3);
+  --clr-link-2: var(--clr-plt-4);
+  --clr-link-hover: var(--clr-plt-11);
+
+  --clr-icon: var(--clr-plt-13);
+  --clr-border: var(--clr-plt-5);
+
+  /* --- СТРУКТУРНЫЕ ФОНЫ --- */
+  --bg-body: var(--clr-plt-1);
+  --bg-header: var(--clr-plt-3);
+  --bg-aside: transparent;
+  --bg-aside-mobile: var(--clr-plt-2);
+  --bg-grid: var(--clr-plt-2);
+  --bg-main: var(--clr-plt-4);
+  --bg-section: var(--clr-plt-5);
+  --bg-article: var(--clr-plt-6);
+  --bg-footer: var(--clr-plt-7);
+
+  --clr-hero-grad: linear-gradient(135deg, #0070f3 0%, #9b59b6 100%);
+  /* */
+
+  /* Отступы */
+  --gap-container: 20px;
+  /* */
+  --space-section: 20px;
+  /* */
+  --space-article: 20px;
+  /* */
+  --spacing-xs: 5px;
+  /* */
+  --spacing-sm: 10px;
+  /* */
+  --spacing-md: 20px;
+  /* */
+  --spacing-lg: 40px;
+  /* */
+
+  /* Section */
+  --sec-pad-t: 20px;
+  /* */
+  --sec-pad-l: 20px;
+  /* */
+  --sec-pad-r: 20px;
+  /* */
+  --sec-pad-b: 20px;
+  /* */
+  --sec-marg-t: 20px;
+  /* */
+  --sec-marg-l: 20px;
+  /* */
+  --sec-marg-r: 20px;
+  /* */
+  --sec-marg-b: 20px;
+  /* */
+  /* */
+
+  /* Article */
+  --art-pad-t: 20px;
+  /* */
+  --art-pad-l: 20px;
+  /* */
+  --art-pad-r: 20px;
+  /* */
+  --art-pad-b: 20px;
+  /* */
+  --art-marg-t: 20px;
+  /* */
+  --art-marg-l: 20px;
+  /* */
+  --art-marg-r: 20px;
+  /* */
+  --art-marg-b: 20px;
+  /* */
+
+  /* Кнопки (baseButton) */
+  --clr-btn-normal-bg: var(--clr-plt-6);
+  --clr-btn-normal-text: var(--clr-text);
+  --clr-btn-normal-hover-bg: var(--clr-link);
+  --clr-btn-normal-hover-text: var(--clr-text-light);
+  --clr-btn-accent-bg: var(--clr-link);
+  --clr-btn-accent-text: var(--clr-text-light);
+  --clr-btn-accent-hover-bg: var(--clr-plt-11);
+  --clr-btn-blocked-bg: var(--clr-plt-1);
+  --clr-btn-blocked-text: var(--clr-text-muted);
+
+
+  --clr-btn-icon-hover-text: crimson;
+  /* */
+  --clr-btn-icon-hover-bg: rgba(0, 0, 0, 0.05);
+  /* */
+
+  --clr-btn-out-text: #007bff;
+  /* */
+  --clr-btn-out-hover-text: blue;
+  /* */
+  /* */
+
+  /* Инпуты (inputsGPT) */
+  --clr-inp-border: var(--clr-plt-1);
+  /* */
+  /* */
+  --clr-inp-border-focus: var(--clr-link);
+  /* */
+  --clr-inp-error-text: var(--clr-plt-14);
+  /* */
+
+  --clr-inp-confirm-border: var(--clr-plt-5);
+  /* */
+  --clr-inp-confirm-bg: var(--clr-plt-6);
+  /* */
+
+  --clr-inp-intro-text: var(--clr-text);
+  /* */
+
+  /* Формы (base/forms) */
+  --clr-form-divider-text: var(--clr-text-muted);
+  /* */
+  --clr-form-divider-line: var(--clr-plt-5);
+  /* */
+
+  /* Ошибки (err) */
+  --clr-err-code-text: var(--clr-plt-14);
+  /* */
+  --clr-err-sub-text: var(--clr-text-muted);
+  /* */
+
+  /* Автонавигация (autoNav) */
+  --clr-anav-bg: var(--clr-plt-6);
+  /* */
+  --clr-anav-title-text: var(--clr-text-light);
+  /* */
+  --clr-anav-link-border: var(--clr-plt-1);
+  /* */
+  --clr-anav-link-hover-text: var(--clr-text-light);
+  /* */
+
+  /* Модалки (modal) */
+  --clr-modal-overlay-bg: rgba(0, 0, 0, 0.6);
+  /* */
+  --clr-modal-close-text: var(--clr-text);
+  /* */
+  --clr-modal-content-bg: var(--clr-text-light);
+  /* */
+  --clr-modal-shadow: rgba(0, 0, 0, 0.2);
+  /* */
+
+  /* Отладка (debag) */
+  --clr-dbg-intro-text: var(--clr-text);
+  /* */
+  --clr-dbg-demo-bg: var(--clr-plt-6);
+  /* */
+  --clr-dbg-demo-border: var(--clr-plt-5);
+  /* */
+  --clr-dbg-code-bg: var(--clr-plt-9);
+  /* */
+  --clr-dbg-code-text: var(--clr-text-light);
+  /* */
+
+  /* Авторизация/Регистрация (forAuthReg) */
+  --clr-auth-footer-text: var(--clr-text-muted);
+  /* */
+  --clr-auth-link-text: var(--clr-link);
+  /* */
+
+  /* Кабинет (forCabinet) */
+  --clr-cab-title-text: var(--clr-text);
+  /* */
+  --clr-cab-title-border: var(--clr-plt-5);
+  /* */
+  --clr-cab-group-border: var(--clr-plt-1);
+  /* */
+  --clr-cab-label-text: var(--clr-text-muted);
+  /* */
+
+  /* Футер/Социалки (forFooter/social) */
+  --clr-soc-link-border: var(--clr-plt-1);
+  /* */
+  --clr-soc-link-hover-text: var(--clr-text-light);
+  /* */
+
+  /* Хиро (forHero) */
+  --clr-hero-text: var(--clr-text-light);
+  /* */
+  --clr-hero-nav-arrow: rgba(255, 255, 255, 0.3);
+  /* */
+  --clr-hero-nav-arrow-hover: var(--clr-text-light);
+  /* */
+  --clr-hero-line: var(--clr-plt-16);
+  /* */
+  --clr-hero-label: var(--clr-plt-16);
+  /* */
+
+  /* Главная - кнопки (forHome/sec_btn) / инпуты (sec_inp) */
+  --clr-home-demo-bg: var(--clr-plt-6);
+  /* */
+  --clr-home-demo-border: var(--clr-plt-5);
+  /* */
+  --clr-home-code-bg: var(--clr-plt-9);
+  /* */
+  --clr-home-code-text: var(--clr-text-light);
+  /* */
+  --clr-home-log-bg: var(--clr-text-light);
+  /* */
+  --clr-home-log-border: var(--clr-plt-1);
+  /* */
+  --clr-home-log-text: var(--clr-text-muted);
+  /* */
+
+  /* Документация (sec_inp/ingpt) */
+  --clr-doc-block-border: var(--clr-plt-5);
+  /* */
+  --clr-doc-block-bg: var(--clr-text-light);
+  /* */
+  --clr-doc-shadow: rgba(0, 0, 0, 0.05);
+  /* */
+  --clr-doc-table-bg: var(--clr-plt-6);
+  /* */
+  --clr-doc-table-border: var(--clr-plt-5);
+  /* */
+  --clr-doc-badge-in-bg: var(--clr-plt-6);
+  /* */
+  --clr-doc-badge-in-border: var(--clr-plt-1);
+  /* */
+  --clr-doc-badge-out-bg: var(--clr-plt-5);
+  /* */
+  --clr-doc-badge-out-text: var(--clr-link);
+  /* */
+  --clr-doc-badge-out-border: var(--clr-plt-12);
+  /* */
+  --clr-doc-example-bg: var(--clr-plt-6);
+  /* */
+  --clr-doc-example-border: var(--clr-plt-1);
+  /* */
+  --clr-doc-codebox-bg: var(--clr-plt-9);
+  /* */
+  --clr-doc-codebox-text: var(--clr-plt-16);
+  /* */
+  --clr-doc-title-text: var(--clr-link);
+  /* */
+  --clr-doc-subtitle-text: var(--clr-text-muted);
+  /* */
+  --clr-doc-desc-text: var(--clr-text);
+  /* */
+  --clr-doc-label-text: var(--clr-plt-13);
+  /* */
+
+  /* Навигация (forNav) */
+  --clr-nav-text-shadow: rgba(0, 0, 0, 0.3);
+  /* */
+  --clr-nav-overlay-bg: rgba(0, 0, 0, 0.3);
+  /* */
+  --clr-nav-menu-shadow: rgba(0, 0, 0, 0.05);
+  /* */
+
+  /* Страница: NotFound (pages/notfound) */
+  --clr-ntf-code-text: var(--clr-plt-14);
+  /* */
+  --clr-ntf-msg-text: var(--clr-text);
+  /* */
+  --clr-ntf-desc-text: var(--clr-text-muted);
+  /* */
+  --clr-ntf-btn-bg: var(--clr-link);
+  /* */
+  --clr-ntf-btn-text: var(--clr-text-light);
+  /* */
+  --clr-ntf-btn-hover-bg: var(--clr-plt-11);
+  /* */
+
+  /* Страница: Инпуты (pages/inputs) */
+  --clr-inp-pg-intro-text: var(--clr-text);
+  /* */
+  --clr-inp-pg-demo-bg: var(--clr-plt-6);
+  /* */
+  --clr-inp-pg-demo-border: var(--clr-plt-5);
+  /* */
+  --clr-inp-pg-code-bg: var(--clr-plt-9);
+  /* */
+  --clr-inp-pg-code-text: var(--clr-text-light);
+  /* */
+
+  /* Страница: О нас (pages/about_us) */
+  --clr-abt-img-shadow: rgba(0, 0, 0, 0.2);
+  /* */
+  --clr-abt-subtitle-text: var(--clr-text-muted);
+  /* */
+
+  /* Страница: Структура (pages/struct) */
+  --clr-str-intro-text: var(--clr-text);
+  /* */
+  --clr-str-demo-bg: var(--clr-plt-6);
+  /* */
+  --clr-str-demo-border: var(--clr-plt-5);
+  /* */
+  --clr-str-code-bg: var(--clr-plt-9);
+  /* */
+  --clr-str-code-text: var(--clr-text-light);
+  /* */
+  --clr-str-review-bg: var(--clr-plt-13);
+  /* */
+  --clr-str-review-border: var(--clr-plt-1);
+  /* */
+  --clr-str-head-bg: rgba(52, 152, 219, 0.1);
+  /* */
+  --clr-str-head-border: var(--clr-link);
+  /* */
+  --clr-str-aside-bg: rgba(230, 126, 34, 0.1);
+  /* */
+  --clr-str-aside-border: #e67e22;
+  /* */
+  --clr-str-main-bg: rgba(46, 204, 113, 0.1);
+  /* */
+  --clr-str-main-border: #2ecc71;
+  /* */
+  --clr-str-sec-bg: rgba(155, 89, 182, 0.1);
+  /* */
+  --clr-str-sec-border: #9b59b6;
+  /* */
+  --clr-str-foot-bg: rgba(149, 165, 166, 0.1);
+  /* */
+  --clr-str-foot-border: #95a5a6;
+  /* */
+  --clr-str-hero-bg: #cfe2ff;
+  /* */
+  --clr-str-hero-border: #b6d4fe;
+  /* */
+  --clr-str-grid-bg: var(--clr-text-light);
+  /* */
+  --clr-str-cont-bg: var(--clr-plt-5);
+  /* */
+  --clr-str-cont-border: var(--clr-plt-1);
+  /* */
+  --clr-str-cont-text: var(--clr-text-muted);
+  /* */
+  --clr-str-aside-border-alt: #f5c2c7;
+  /* */
+  --clr-str-art-bg: var(--clr-plt-4);
+  /* */
+  --clr-str-switch-bg: var(--clr-plt-6);
+  /* */
+  --clr-str-switch-text: var(--clr-text-muted);
+
+  /* --- ABOUT PAGE (Сохраненные оригинальные цвета) --- */
+  --clr-abt-img-shadow: rgba(0, 0, 0, 0.2);
+  --clr-abt-subtitle-text: #666;
+}
