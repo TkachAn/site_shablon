@@ -1,0 +1,9 @@
+.auth {
+    padding: 0 20px;
+    border: 1px solid var(--border);
+}
+
+.reg {
+    padding: 0 20px;
+    border: 1px solid var(--border);
+}

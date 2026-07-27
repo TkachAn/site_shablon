@@ -1,0 +1,88 @@
+/* ─── Каталог: дополнительные стили (Mobile First) ─── */
+
+/* Шапка контентной области */
+.contentHeader {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-h, #1a202c);
+    margin: 0;
+}
+
+.count {
+    font-size: 0.82rem;
+    color: var(--text, #718096);
+}
+
+/* ─── Сетка карточек — Mobile First ─── */
+/*
+ * Card_blok из structure.jsx уже имеет базовый desktop-grid.
+ * Здесь переопределяем под Mobile First и добавляем класс через className prop.
+ */
+.cardGrid {
+    /* Mobile: 1 колонка */
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    text-align: left;
+}
+
+@media (min-width: 480px) {
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .cardGrid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+        gap: 1.25rem;
+    }
+}
+
+/* ─── Пустой стейт ─── */
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 1rem;
+    color: var(--text, #718096);
+    text-align: center;
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    opacity: 0.4;
+}
+
+.empty p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.resetBtn {
+    padding: 9px 22px;
+    border-radius: 8px;
+    border: 1.5px solid #2c7a7b;
+    background: transparent;
+    color: #2c7a7b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.resetBtn:hover {
+    background: #2c7a7b;
+    color: #fff;
+}

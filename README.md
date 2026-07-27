@@ -1,42 +1,16 @@
-# VitePremium Starter 🚀
+# React + Vite
 
-A modern, high-performance React starter template powered by Vite.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- ⚡️ **Vite 6** - The next generation of frontend tooling.
-- ⚛️ **React 19** - For building declarative and component-based UIs.
-- 🎨 **Premium Styling** - Modern Vanilla CSS with HSL variables and Glassmorphism.
-- ✨ **Framer Motion** - Silky smooth micro-animations.
-- 🛡️ **Lucide Icons** - Beautiful and consistent SVG icons.
-- 📱 **Mobile First** - Fully responsive design.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Getting Started
+## React Compiler
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-2. **Run development server:**
-   ```bash
-   npm run dev
-   ```
+## Expanding the Oxlint configuration
 
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
-## Project Structure
-
-```text
-src/
-├── components/ (Coming soon - currently in App.jsx for simplicity)
-├── index.css   (Global styles & Design tokens)
-├── App.jsx     (Main Layout & Page Sections)
-└── main.jsx    (Entry point)
-```
-
-## CSS Design Tokens
-The project uses HSL variables for easy theme customization. Find them in `src/index.css`.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
