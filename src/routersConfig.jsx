@@ -1,15 +1,14 @@
 //routersConfig.jsx
 
 import { About } from "./pages/about/about.jsx";
-//import { Contacts } from "./pages/contact/contacts.jsx";
 import { Home } from "./pages/home/homePage.jsx";
-import { NotFound } from "./pages/notfound/notF.jsx";
+import { NotFound } from "./pages/notfound/notFound.jsx";
 import { Catalog } from "./pages/catalog/catalog.jsx";
+import { Cabinet } from "./pages/cabinet/Cabinet.jsx";
 
 //import { ErrorsPage } from "./pages/errors.jsx";
 //import { RegPage } from "./pages/registration.jsx";
 //import { AuthPage } from "./pages/authorization.jsx";
-//import { Cabinet } from "./pages/cabinet.jsx";
 //import { InputsPage } from "./pages/inputs/inputsPage.jsx";
 //import { StructPage } from "./pages/struct/strPage.jsx";
 //import { FormsPage } from "./pages/forms/FormsPage.jsx";
@@ -33,6 +32,12 @@ export const routes = [
     element: <Catalog />,
     title: "Каталог",
     showInMenu: true,
+  },
+  {
+    path: "/cabinet",
+    element: <Cabinet />,
+    title: "Личный кабинет",
+    showInMenu: false,
   },
   {
     path: "*",
