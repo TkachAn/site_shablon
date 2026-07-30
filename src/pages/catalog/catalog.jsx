@@ -202,14 +202,7 @@ export function Catalog() {
     );
     // sidebarLeft={sidebar}
     return (
-        <Layout sidebarLeft={sidebar}>
-
-            {/* ─── Шапка контентной области ─── */}
-            <div className={s.contentHeader}>
-                <h1 className={s.pageTitle}>Каталог</h1>
-                <span className={s.count}>{getNoun(totalCount, 'товар', 'товара', 'товаров')}</span>
-            </div>
-
+        <Layout sidebarLeft={sidebar} sw_h1={true} title="Каталог">
             {/* ─── Секции по категориям — SmartMenu видит их автоматически ─── */}
             {grouped.length > 0 ? (
                 grouped.map(({ cat, slug, items }) => (
@@ -256,6 +249,8 @@ export function Catalog() {
 }
 
 /* Склонение */
+
+//<span className={s.count}>{getNoun(totalCount, 'товар', 'товара', 'товаров')}</span>
 function getNoun(n, one, few, many) {
     const m10 = n % 10, m100 = n % 100;
     if (m100 >= 11 && m100 <= 14) return `${n} ${many}`;

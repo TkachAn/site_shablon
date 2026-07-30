@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import s from "./s.module.css";
 
 export function Auth() {
     return (
-        <div className={s.auth}>
-            <h3>Auth</h3>
-        </div>
+        <Link to="/cabinet">
+            <div className={s.auth}>
+                <h3>Auth</h3>
+            </div>
+        </Link>
     );
 }
 
