@@ -58,9 +58,9 @@ export function Main_Section({ children, title, sw }) {
   );
 }
 
-export function Hero({ children, id }) {
+export function Hero_wrapper({ children, id, tittle }) {
   return (
-    <section id={id} className={s.hero} title="HERO">
+    <section id={id} className={s.hero_wrapper} title={tittle}>
       {children}
     </section>
   );

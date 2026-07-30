@@ -1,3 +1,4 @@
+/*s.module.css*/
 /*---Container---*/
 h1 {
     margin-bottom: 20px;
@@ -224,7 +225,7 @@ h1 {
 }
 
 /* --- HERO COMPONENT --- */
-.hero {
+.hero_wrapper {
     width: 100%;
     min-height: var(--hero-min-height, 300px);
     display: flex;
