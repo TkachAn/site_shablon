@@ -1,0 +1,75 @@
+/* --- HERO & HEADERS ADAPTIVE --- */
+.hero_wrapper {
+    width: 100%;
+    padding-top: calc(var(--header-h, 61px) + 0.2rem);
+    background-color: #efece7;
+}
+
+.hero_wrapper :global(.hero_container) {
+    width: 100%;
+    /* Если нужно строго на всю ширину экрана (Full Width), замените на 100% */
+    max-width: var(--container-max-width, 1440px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_wrapper :global(.hero_img_box) {
+    position: relative;
+    /* Важно для позиционирования внутреннего текста */
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    min-height: 220px;
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.hero_wrapper :global(.hero_img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Текст "Hero!" внутри баннера на всю ширину */
+.hero_wrapper :global(.hero_overlay_text) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-transform: none;
+    white-space: nowrap;
+
+    /* Адаптивный размер: минимум 48px, плавно растет как 12% от ширины экрана, максимум 140px */
+    font-size: clamp(48px, 12vw, 140px);
+    letter-spacing: -0.02em;
+}
+
+/* Заголовок "Привет!" под баннером на всю ширину */
+.hero_wrapper :global(.hero_title) {
+    width: 100%;
+    /* Растягиваем на всю ширину доступного контейнера */
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+
+    /* На десктопе отступы больше, шрифт крупнее */
+    padding: clamp(1.5rem, 3vw, 3rem) 1rem;
+    /* Шрифт плавно масштабируется от 24px до 48px в зависимости от экрана */
+    font-size: clamp(24px, 4vw, 48px);
+}
+
+/* Изменение пропорций для мобильных устройств */
+@media (max-width: 768px) {
+    .hero_wrapper :global(.hero_img_box) {
+        aspect-ratio: 16 / 9;
+    }
+}
