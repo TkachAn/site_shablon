@@ -18,6 +18,8 @@
 
 .count {
     font-size: 0.82rem;
+    padding: 0;
+    margin: 0;
     color: var(--text, #718096);
 }
 

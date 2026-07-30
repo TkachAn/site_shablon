@@ -202,7 +202,11 @@ export function Catalog() {
     );
     // sidebarLeft={sidebar}
     return (
-        <Layout sidebarLeft={sidebar} sw_h1={true} title="Каталог">
+        <Layout sidebarLeft={sidebar} sw_h1={true} title={
+            <>
+                Каталог  <span className={s.count}>{'найдено' + getNoun(totalCount, 'товар', 'товара', 'товаров')}</span>
+            </>
+        }>
             {/* ─── Секции по категориям — SmartMenu видит их автоматически ─── */}
             {grouped.length > 0 ? (
                 grouped.map(({ cat, slug, items }) => (
