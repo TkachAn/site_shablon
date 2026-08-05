@@ -140,7 +140,7 @@ h1 {
     .asideRight {
         margin-top: var(--spacing-xs, 5px);
         position: sticky;
-        top: var(--header-h, 61px);
+        top: var(--header-h, 66px);
         height: auto;
         align-self: start;
         background: var(--bg-aside, #fcfcfc);
